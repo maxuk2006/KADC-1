@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ArrayOfLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Log>
+    <Date>2013-12-08T16:35:57.9244629+00:00</Date>
+    <Type>NewFeature</Type>
+    <Description>Added Log page.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-08T16:35:57.9244629+00:00</Date>
+    <Type>BugFix</Type>
+    <Description>Fixed issue with Epic Boss calculator not giving appropriate damage bonus when armor matched on 2nd boss element only.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-08T16:35:57.9244629+00:00</Date>
+    <Type>Data</Type>
+    <Description>Forgestone Aegis now possible fusion result.  Added Snowman's Nemesis regular stats.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-08T22:11:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Red Kaleidoscopic Armor.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-08T22:11:00.0000000+00:00</Date>
+    <Type>BugFix</Type>
+    <Description>Fixed Armor and Log ordering.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-08T23:08:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Fixed Red Kaleidoscopic Raiment name.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-09T12:30:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Red Kaleidoscopic Raiment regular stats.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-10T21:25:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Red Kaleidoscopic Raiment plus stats.  Added Faerie Dragon's Nemesis Armor icon.  Fixed various Nemesis armor plus stats.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-14T17:36:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Vesture of Frost.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-14T18:40:00.0000000+00:00</Date>
+    <Type>BugFix</Type>
+    <Description>Updated knight stat formula.</Description>
+  </Log>
+</ArrayOfLog>

@@ -1,0 +1,22 @@
+﻿@model KnightsAndDragonsCalculatorApplication.Models.EpicBossTestModel
+<div id="levelDataContainer" class="container">
+    <div class="alert alert-warning">Table shows current difference in damage done/taken between my calculator and actual results for Jack Frost boss levels between 24 and 43 inclusive for Guardian's Battlegear worn by player character.  Armor level varies between 63 and 70, knights used varies between 3 and 5.  Guild rank is High Commander and with 6% bonus on all elements</div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Damage Done</th>
+                <th>Damage Taken</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (KeyValuePair<int, int> difference in Model.Differences)
+            {
+                <tr>
+                    <td>@difference.Key</td>
+                    <td>@difference.Value</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

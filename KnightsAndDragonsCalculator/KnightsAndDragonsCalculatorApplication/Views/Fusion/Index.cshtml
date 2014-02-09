@@ -1,0 +1,100 @@
+﻿@model KnightsAndDragonsCalculatorApplication.Models.FusionModel
+<div id="fusion" class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form">
+                <div class="form-group">
+                    <label for="ddlFusionArmor1">Armor 1</label>
+                    <select class="form-control" id="ddlFusionArmor1" name="fusionArmorName1">
+                        @foreach (var armorName in Model.FusableArmorNames)
+                        {
+                            <option>@armorName</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ddlFusionArmor2">Armor 2</label>
+                    <select class="form-control" id="ddlFusionArmor2" name="fusionArmorName2">
+                        @foreach (var armorName in Model.FusableArmorNames)
+                        {
+                            <option>@armorName</option>
+                        }
+                    </select>
+                </div>
+                <button id="btnFusionCombine" type="button" class="btn btn-default">Combine</button>
+            </form>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form">
+                <div class="form-group">
+                    <label for="ddlFusionTargetArmor">Target armor</label>
+                    <select class="form-control" id="ddlFusionTargetArmor" name="fusionTargetArmor">
+                        @foreach (var armorName in Model.FusionArmorNames)
+                        {
+                            <option>@armorName</option>
+                        }
+                    </select>
+                </div>
+                <button id="btnFusionSplit" type="button" class="btn btn-default">Split</button>
+            </form>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script>
+
+    $('#btnFusionCombine').on('click', function (e) {
+
+        var uri = "../api/combine/" + $("#ddlFusionArmor1").val() + "/" + $("#ddlFusionArmor2").val();
+
+        $("#resultsFusion").remove();
+
+        $.getJSON(uri)
+            .done(function (data) {
+                if (data.ErrorMessage != "" && data.ErrorMessage != null) {
+                    $("#fusion").append($("<div id=\"resultsFusion\" class=\"alert alert-danger\">").text(data.ErrorMessage));
+                }
+                else {
+                    $("#fusion").append($("<div id=\"resultsFusion\" class=\"panel panel-success\">"));
+                    $("#resultsFusion").append($("<div class=\"panel-heading\">").text("Results"));
+                    $("#resultsFusion").append($("<table id=\"tbResultsFusion\" class=\"table table-hover\">"));
+                    $("#tbResultsFusion").append($("<thead>")).append("<tr><th>Name</th><th>Rarity</th><th>Element(s)</th><th>Max Total Stats</th></tr>");
+                    $("#tbResultsFusion").append($("<tbody id=\"tbbResultsFusion\">"));
+                    if (data.Fusion != null && data.Fusion.Armors != null) {
+                        for (var i = 0; i < data.Fusion.Armors.length; i++) {
+                            $("#tbbResultsFusion").append("<tr><td><img src=\"../Images/Icons/" + data.Fusion.Armors[i].SafeName + ".png\" alt=\"" + data.Fusion.Armors[i].Name + "\" class=\"img-rounded\" />" + data.Fusion.Armors[i].Name + "</td><td><img src=\"../Images/Icons/" + data.Fusion.Armors[i].SafeRarityDescription + ".png\" alt=\"" + data.Fusion.Armors[i].RarityDescription + "\" class=\"img-rounded\" /></td><td><img src=\"../Images/Icons/" + data.Fusion.Armors[i].Element1Description + ".png\" alt=\"" + data.Fusion.Armors[i].Element1Description + "\" class=\"img-rounded\" />" + (data.Fusion.Armors[i].Element2Description != "" ? "<img src=\"../Images/Icons/" + data.Fusion.Armors[i].Element2Description + ".png\" alt=\"" + data.Fusion.Armors[i].Element2Description + "\" class=\"img-rounded\" />" : "") + "</td><td>" + data.Fusion.Armors[i].MaxNormalTotal + "</td></tr>");
+                        }
+                    }
+                }
+            });
+    });
+
+    $('#btnFusionSplit').on('click', function (e) {
+
+        var uri = "../api/split/" + $("#ddlFusionTargetArmor").val();
+
+        $("#resultsFusion").remove();
+
+        $.getJSON(uri)
+            .done(function (data) {
+                if (data.ErrorMessage != "" && data.ErrorMessage != null) {
+                    $("#fusion").append($("<div id=\"resultsFusion\" class=\"alert alert-danger\">").text(data.ErrorMessage));
+                }
+                else {
+                    $("#fusion").append($("<div id=\"resultsFusion\" class=\"panel panel-success\">"));
+                    $("#resultsFusion").append($("<div class=\"panel-heading\">").text("Results"));
+                    $("#resultsFusion").append($("<table id=\"tbResultsFusion\" class=\"table table-hover\">"));
+                    $("#tbResultsFusion").append($("<thead>")).append("<tr><th>Name</th><th>Rarity</th><th>Element(s)</th><th>Max Total Stats</th></tr>");
+                    $("#tbResultsFusion").append($("<tbody id=\"tbbResultsFusion\">"));
+                    if (data.Fusion != null && data.Fusion.Armors != null) {
+                        for (var i = 0; i < data.Fusion.Armors.length; i++) {
+                            $("#tbbResultsFusion").append("<tr><td><img src=\"../Images/Icons/" + data.Fusion.Armors[i].SafeName + ".png\" alt=\"" + data.Fusion.Armors[i].Name + "\" class=\"img-rounded\" />" + data.Fusion.Armors[i].Name + "</td><td><img src=\"../Images/Icons/" + data.Fusion.Armors[i].SafeRarityDescription + ".png\" alt=\"" + data.Fusion.Armors[i].RarityDescription + "\" class=\"img-rounded\" /></td><td><img src=\"../Images/Icons/" + data.Fusion.Armors[i].Element1Description + ".png\" alt=\"" + data.Fusion.Armors[i].Element1Description + "\" class=\"img-rounded\" />" + (data.Fusion.Armors[i].Element2Description != "" ? "<img src=\"../Images/Icons/" + data.Fusion.Armors[i].Element2Description + ".png\" alt=\"" + data.Fusion.Armors[i].Element2Description + "\" class=\"img-rounded\" />" : "") + "</td><td>" + data.Fusion.Armors[i].MaxNormalTotal + "</td></tr>");
+                        }
+                    }
+                }
+            });
+    });
+
+</script>

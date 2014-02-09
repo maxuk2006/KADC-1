@@ -1,0 +1,29 @@
+﻿@model KnightsAndDragonsCalculatorApplication.Models.LogModel
+<div id="logContainer" class="container">
+    <table id="tblLog" class="table table-hover tablesorter">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var log in Model.Logs)
+            {
+                <tr class="@log.RowClass">
+                    <td >@log.Date</td>
+                    <td>@log.TypeDescription</td>
+                    <td>@log.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script>
+    $(document).ready(function () {
+        $("#tblLog").tablesorter();
+    });
+</script>
+

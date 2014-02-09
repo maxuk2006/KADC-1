@@ -1,0 +1,212 @@
+﻿@model KnightsAndDragonsCalculatorApplication.Models.EpicBossModel
+<div id="epicBoss" class="container">
+    <div class="alert alert-warning">Results will be incorrect for players that aren't level 100 as I do not have correct base stats for them.  If you know the formula or have a complete table please email me.</div>
+    <form role="form">
+        <div class="panel panel-default">
+            <div class="panel-heading">Boss</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="txtBossLevel">Level</label>
+                        <input type="number" class="form-control" id="txtBossLevel" value="1" name="bossLevel" />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="ddlBossElement1">Element 1</label>
+                        <select class="form-control" id="ddlBossElement1" name="bossElement1">
+                            @foreach (var element in Model.Elements)
+                            {
+                                <option value="@element.Value">@element.Key</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="ddlBossElement2">Element 2</label>
+                        <select class="form-control" id="ddlBossElement2" name="bossElement2">
+                            <option>(None)</option>
+                            @foreach (var element in Model.Elements)
+                            {
+                                <option value="@element.Value">@element.Key</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="txtBossAttack">Attack</label>
+                        <input type="number" class="form-control" id="txtBossAttack" value="1" name="bossAttack" />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="txtBossDefense">Defense</label>
+                        <input type="number" class="form-control" id="txtBossDefense" value="1" name="bossDefense" />
+                    </div>
+                    <div class="form-group col-md-4 hidden">
+                        <label for="txtBossHealth">Health</label>
+                        <input type="number" class="form-control" id="txtBossHealth" value="1" name="bossHealth" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Guild</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="ddlGuildRankBonus">Rank</label>
+                        <select class="form-control" id="ddlGuildRankBonus" name="guildRankBonus">
+                            @foreach (var rank in Model.GuildRanks)
+                            {
+                                <option value="@rank.Value">@rank.Key</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="txtGuildAirBonus">Air Bonus</label>
+                        <input type="number" class="form-control" id="txtGuildAirBonus" value="0" name="guildAirBonus" />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="txtGuildEarthBonus">Earth Bonus</label>
+                        <input type="number" class="form-control" id="txtGuildEarthBonus" value="0" name="guildEarthBonus" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="txtGuildFireBonus">Fire Bonus</label>
+                        <input type="number" class="form-control" id="txtGuildFireBonus" value="0" name="guildFireBonus" />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="txtGuildSpiritBonus">Spirit Bonus</label>
+                        <input type="number" class="form-control" id="txtGuildSpiritBonus" value="0" name="guildSpiritBonus" />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="txtGuildWaterBonus">Water Bonus</label>
+                        <input type="number" class="form-control" id="txtGuildWaterBonus" value="0" name="guildWaterBonus" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Player</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="txtPlayerLevel">Level</label>
+                        <input type="number" class="form-control" id="txtPlayerLevel" value="100" name="playerLevel" />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="txtPlayerKnightCount">Number of knights to use</label>
+                        <input type="number" class="form-control" id="txtPlayerKnightCount" value="1" name="playerLevel" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="defaultPlayerArmorNameColumn" class="hidden">
+                        <select class="form-control player-armor-name" name="playerArmor">
+                            @foreach (var armorName in Model.ArmorNames)
+                            {
+                                <option>@armorName</option>
+                            }
+                        </select>
+                    </div>
+                    <div id="defaultPlayerArmorLevelColumn" class="hidden">
+                        <input type="number" class="form-control player-armor-level" value="1" name="playerArmorLevel" />
+                    </div>
+                    <div id="defaultPlayerArmorIsPlusColumn" class="hidden">
+                        <input type="checkbox" class="form-control player-armor-is-plus">
+                    </div>
+                    <div id="defaultPlayerArmorIsNemesisColumn" class="hidden">
+                        <input type="checkbox" class="form-control player-armor-is-nemesis">
+                    </div>
+                    <table id="tblPlayerArmor" class="table">
+                        <thead>
+                            <tr>
+                                <th>Armor</th>
+                                <th>Level</th>
+                                <th>Plus</th>
+                                <th>Nemesis</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <button id="btnPlayerArmorAdd" type="button" class="btn btn-success">Add</button>
+                        <button id="btnPlayerArmorRemove" type="button" class="btn btn-danger">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <button id="btnCalculate" type="button" class="btn btn-default">Calculate</button>
+            </div>
+        </div>
+    </form>
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script> 
+    $('#btnPlayerArmorRemove').on('click', function (e) {
+        $('#tblPlayerArmor tbody tr:last').remove();
+    });
+
+    $('#btnPlayerArmorAdd').on('click', function (e) {
+        $('#tblPlayerArmor tbody').append("<tr><td>" + $("#defaultPlayerArmorNameColumn").html() + "</td><td>" + $("#defaultPlayerArmorLevelColumn").html() + "</td><td>" + $("#defaultPlayerArmorIsPlusColumn").html() + "</td><td>" + $("#defaultPlayerArmorIsNemesisColumn").html() + "</td></tr>");
+    });
+  
+    $(document).ready(function () {
+        $('#btnPlayerArmorAdd').trigger('click');
+    });
+
+    $('#btnCalculate').on('click', function (e) {
+
+        var bossElement2 = "null";
+        if ($("#ddlBossElement2").val() != "(None)")
+        {
+            bossElement2 = "\"" + $("#ddlBossElement2").val() + "\"";
+        }
+        var epicBossJson = "\"EpicBoss\":{\"Level\":" + $("#txtBossLevel").val() + ",\"Element1\":\"" + $("#ddlBossElement1").val() + "\",\"Element2\":" + bossElement2 + ",\"Attack\":" + $("#txtBossAttack").val() + ",\"Defense\":" + $("#txtBossDefense").val() + ",\"Health\":" + $("#txtBossHealth").val() + "}";
+
+        var guildJson = "\"Guild\":{\"RankBonus\":" + $("#ddlGuildRankBonus").val() + ",\"AirBonus\":" + $("#txtGuildAirBonus").val() + ",\"EarthBonus\":" + $("#txtGuildEarthBonus").val() + ",\"FireBonus\":" + $("#txtGuildFireBonus").val() + ",\"SpiritBonus\":" + $("#txtGuildSpiritBonus").val() + ",\"WaterBonus\":" + $("#txtGuildWaterBonus").val() + "}";
+
+        var playerArmors = "";
+        $("#tblPlayerArmor tbody tr").each(function (i, tr) {
+
+            if (i > 0) {
+                playerArmors += ",";
+            }
+            playerArmors += "{\"ArmorName\":\"" + $(".player-armor-name", tr).val() + "\",\"Level\":" + $(".player-armor-level", tr).val() + ",\"IsPlus\":" + $(".player-armor-is-plus", tr).prop("checked") + ",\"IsNemesis\":" + $(".player-armor-is-nemesis", tr).prop("checked") + "}";
+        });
+
+        var playerJson = "\"Player\":{\"Level\":" + $("#txtPlayerLevel").val() + ",\"KnightCount\":" + $("#txtPlayerKnightCount").val() + ",\"Armors\":[" + playerArmors + "]}";
+
+        var requestData = "{" + epicBossJson + "," + guildJson + "," + playerJson + "}";
+
+        $("#results").remove();
+
+        $.ajax({
+            url: "../api/calculate/epicBoss",
+            type: 'POST',
+            data: requestData,
+            dataType: 'json',
+            contentType: 'application/json'
+        }).done(function (data) {
+            if (data.ErrorMessage != "" && data.ErrorMessage != null) {
+                $("#epicBoss").append($("<div id=\"results\" class=\"alert alert-danger\">").text(data.ErrorMessage));
+            }
+            else {
+                $("#epicBoss").append($("<div id=\"results\" class=\"panel panel-success\">"));
+                $("#results").append($("<div class=\"panel-heading\">").text("Results"));
+                $("#results").append($("<table id=\"tblResults\" class=\"table table-hover\">"));
+                $("#tblResults").append($("<thead>"));
+                $("#tblResults thead").append("<tr><th colspan=\"1\"> </th><th colspan=\"4\">Player</th><th colspan=\"4\">Follower</th></tr>");
+                $("#tblResults thead").append("<tr><th>Name</th><th>Damage Done</th><th>Damage Taken</th><th>Hits Taken</th><th>Total Damage Done</th><th>Damage Done</th><th>Damage Taken</th><th>Hits Taken</th><th>Total Damage Done</th></tr>");
+                $("#tblResults").append($("<tbody>"));
+                if (data.EpicBoss != null && data.EpicBoss.Items != null) {
+                    for (var i = 0; i < data.EpicBoss.Items.length; i++) {
+                        $("#tblResults tbody").append("<tr><td><img src=\"../Images/Icons/" + data.EpicBoss.Items[i].ArmorImageName + ".png\" alt=\"" + data.EpicBoss.Items[i].ArmorName + "\" class=\"img-rounded\" />" + data.EpicBoss.Items[i].ArmorName + "</td><td>" + data.EpicBoss.Items[i].PlayerDamageDone + "</td><td>" + data.EpicBoss.Items[i].PlayerDamageTaken + "</td><td>" + data.EpicBoss.Items[i].PlayerHitsTaken + "</td><td>" + data.EpicBoss.Items[i].PlayerTotalDamageDone + "</td><td>" + data.EpicBoss.Items[i].FollowerDamageDone + "</td><td>" + data.EpicBoss.Items[i].FollowerDamageTaken + "</td><td>" + data.EpicBoss.Items[i].FollowerHitsTaken + "</td><td>" + data.EpicBoss.Items[i].FollowerTotalDamageDone + "</td></tr>");
+                    }
+                }
+            }
+        });
+    });
+
+</script>

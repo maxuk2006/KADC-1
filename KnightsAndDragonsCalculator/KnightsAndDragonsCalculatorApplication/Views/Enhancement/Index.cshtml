@@ -1,0 +1,183 @@
+﻿@model KnightsAndDragonsCalculatorApplication.Models.EnhancementModel
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li><a href="#full" data-toggle="tab">Full</a></li>
+        <li><a href="#simple" data-toggle="tab">Simple</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="full">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="ddlTargetArmor">Target armor</label>
+                            <select class="form-control" id="ddlTargetArmor" name="targetArmorName">
+                                @foreach (var armorName in Model.TargetArmorNames)
+                                {
+                                    <option>@armorName</option> 
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtTargetLevel">Target level</label>
+                            <input type="number" class="form-control" id="txtTargetLevel" value="1" name="targetLevel" />
+                        </div>
+                        <div class="form-group">
+                            <label for="ddlFeederArmor">Feeder armor</label>
+                            <select class="form-control" id="ddlFeederArmor" name="feederArmorName">
+                                <option>(None)</option>
+                                @foreach (var armorName in Model.FeederArmorNames)
+                                {
+                                    <option>@armorName</option> 
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtStartLevel">Start level</label>
+                            <input type="number" class="form-control" id="txtStartLevel" value="1" name="startLevel" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtArmorsmithCount">Armorsmith Count</label>
+                            <input type="number" class="form-control" id="txtArmorsmithCount" value="1" name="armorsmithCount" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtArmorsmithLevel">Armorsmith Level</label>
+                            <input type="number" class="form-control" id="txtArmorsmithLevel" value="1" name="armorsmithLevel" />
+                        </div>
+                        <button id="btnCalculateFull" type="button" class="btn btn-default">Calculate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="simple">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="ddlTargetArmorMaxLevel">Target armor rarity</label>
+                            <select class="form-control" id="ddlTargetArmorMaxLevel" name="targetArmorMaxLevel">
+                                @foreach (var maxLevel in Model.TargetArmorMaxLevels)
+                                {
+                                    <option value="@maxLevel.Value">@maxLevel.Key</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtStartLevelSimple">Start level</label>
+                            <input type="number" class="form-control" id="txtStartLevelSimple" value="1" name="startLevelSimple" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtTargetLevelSimple">Target level</label>
+                            <input type="number" class="form-control" id="txtTargetLevelSimple" value="1" name="targetLevelSimple" />
+                        </div>
+                        <div class="form-group">
+                            <label for="ddlFeederArmorType">Feeder armor type</label>
+                            <select class="form-control" id="ddlFeederArmorType" name="feederArmorType">
+                                @foreach (var cost in Model.BaseFeedCosts)
+                                {
+                                    <option value="@cost.Value">@cost.Key</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="chkIsSameElement"> Same element?
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtArmorsmithCountSimple">Armorsmith Count</label>
+                            <input type="number" class="form-control" id="txtArmorsmithCountSimple" value="1" name="armorsmithCountSimple" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtArmorsmithLevelSimple">Armorsmith Level</label>
+                            <input type="number" class="form-control" id="txtArmorsmithLevelSimple" value="1" name="armorsmithLevelSimple" />
+                        </div>
+                        <button id="btnCalculateSimple" type="button" class="btn btn-default">Calculate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script>
+
+    $('#btnCalculateFull').on('click', function (e) {
+
+        var uri = "../api/calculate/" + $("#ddlTargetArmor").val() + "/";
+        var feeder = $("#ddlFeederArmor").val();
+        if (feeder != "(None)") {
+            uri = uri + $("#txtStartLevel").val() + "/" + $("#txtTargetLevel").val() + "/" + $("#ddlFeederArmor").val() + "/" + $("#txtArmorsmithCount").val() + "/" + $("#txtArmorsmithLevel").val();
+        }
+        else {
+            uri = uri + $("#txtTargetLevel").val();
+        }
+
+        $("#resultsFull").remove();
+
+        $.getJSON(uri)
+            .done(function (data) {
+                if (data.ErrorMessage != "" && data.ErrorMessage != null) {
+                    $("#full").append($("<div id=\"resultsFull\" class=\"alert alert-danger\">").text(data.ErrorMessage));
+                }
+                else {
+                    $("#full").append($("<div id=\"resultsFull\" class=\"panel panel-success\">"));
+                    $("#resultsFull").append($("<div class=\"panel-heading\">").text("Results"));
+                    $("#resultsFull").append($("<table class=\"table\">").append("<tbody id=\"tbbResultsFull\">"));
+                    if (data.Stats != null) {
+                        $("#tbbResultsFull").append("<tr><td>Attack</td><td>" + data.Stats.NormalAttack + "</td></tr>");
+                        $("#tbbResultsFull").append("<tr><td>Defense</td><td>" + data.Stats.NormalDefense + "</td></tr>");
+                        $("#tbbResultsFull").append("<tr><td>Attack+</td><td>" + data.Stats.PlusAttack + "</td></tr>");
+                        $("#tbbResultsFull").append("<tr><td>Defense+</td><td>" + data.Stats.PlusDefense + "</td></tr>");
+                    }
+                    if (data.Feed != null) {
+                        $("#tbbResultsFull").append("<tr><td>Feed Count</td><td>" + data.Feed.FeedCount + "</td></tr>");
+                        $("#tbbResultsFull").append("<tr><td>Feed Cost</td><td>" + data.Feed.FeedCost + "</td></tr>");
+                        $("#tbbResultsFull").append("<tr><td>Craft Cost</td><td>" + data.Feed.CraftCost + "</td></tr>");
+                        $("#tbbResultsFull").append("<tr><td>Craft Time</td><td>" + data.Feed.CraftTimeDescription + "</td></tr>");
+                        $("#tbbResultsFull").append("<tr><td>Material Count</td><td>" + data.Feed.MaterialCount + "</td></tr>");
+                        $("#tbbResultsFull").append("<tr><td>Fusion Stones</td><td>" + data.Feed.FusionCount + "</td></tr>");
+                        $("#tbbResultsFull").append("<tr><td>Fusion Cost</td><td>" + data.Feed.FusionCost + "</td></tr>");
+                        $("#tbbResultsFull").append("<tr><td>Total Cost</td><td>" + data.Feed.TotalCost + "</td></tr>");
+                    }
+                }
+            });
+    });
+
+    $('#btnCalculateSimple').on('click', function (e) {
+
+        var uri = "../api/calculate/" +
+            $("#ddlTargetArmorMaxLevel").val() + "/" +
+            $("#txtStartLevelSimple").val() + "/" +
+            $("#txtTargetLevelSimple").val() + "/" +
+            $("#ddlFeederArmorType").val() + "/" +
+            $("#chkIsSameElement").prop("checked") + "/" +
+            $("#txtArmorsmithCountSimple").val() + "/" +
+            $("#txtArmorsmithLevelSimple").val();
+
+        $("#resultsSimple").remove();
+
+        $.getJSON(uri)
+            .done(function (data) {
+                if (data.ErrorMessage != "" && data.ErrorMessage != null) {
+                    $("#simple").append($("<div id=\"resultsSimple\" class=\"alert alert-danger\">").text(data.ErrorMessage));
+                }
+                else {
+                    $("#simple").append($("<div id=\"resultsSimple\" class=\"panel panel-success\">"));
+                    $("#resultsSimple").append($("<div class=\"panel-heading\">").text("Results"));
+                    $("#resultsSimple").append($("<table class=\"table\">").append("<tbody id=\"tbbResultsSimple\">"));
+                    if (data.Feed != null) {
+                        $("#tbbResultsSimple").append("<tr><td>Feed Count</td><td>" + data.Feed.FeedCount + "</td></tr>");
+                        $("#tbbResultsSimple").append("<tr><td>Feed Cost</td><td>" + data.Feed.FeedCost + "</td></tr>");
+                        $("#tbbResultsSimple").append("<tr><td>Craft Cost</td><td>" + data.Feed.CraftCost + "</td></tr>");
+                        $("#tbbResultsSimple").append("<tr><td>Craft Time</td><td>" + data.Feed.CraftTimeDescription + "</td></tr>");
+                        $("#tbbResultsSimple").append("<tr><td>Material Count</td><td>" + data.Feed.MaterialCount + "</td></tr>");
+                        $("#tbbResultsSimple").append("<tr><td>Fusion Stones</td><td>" + data.Feed.FusionCount + "</td></tr>");
+                        $("#tbbResultsSimple").append("<tr><td>Fusion Cost</td><td>" + data.Feed.FusionCost + "</td></tr>");
+                        $("#tbbResultsSimple").append("<tr><td>Total Cost</td><td>" + data.Feed.TotalCost + "</td></tr>");
+                    }
+                }
+            });
+    });
+
+</script>

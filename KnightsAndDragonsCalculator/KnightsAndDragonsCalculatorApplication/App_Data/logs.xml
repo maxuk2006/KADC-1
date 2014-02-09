@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<ArrayOfLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Log>
+    <Date>2013-12-08T16:35:57.9244629+00:00</Date>
+    <Type>NewFeature</Type>
+    <Description>Added Log page.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-08T16:35:57.9244629+00:00</Date>
+    <Type>BugFix</Type>
+    <Description>Fixed issue with Epic Boss calculator not giving appropriate damage bonus when armor matched on 2nd boss element only.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-08T16:35:57.9244629+00:00</Date>
+    <Type>Data</Type>
+    <Description>Forgestone Aegis now possible fusion result.  Added Snowman's Nemesis regular stats.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-08T22:11:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Red Kaleidoscopic Armor.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-08T22:11:00.0000000+00:00</Date>
+    <Type>BugFix</Type>
+    <Description>Fixed Armor and Log ordering.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-08T23:08:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Fixed Red Kaleidoscopic Raiment name.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-09T12:30:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Red Kaleidoscopic Raiment regular stats.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-10T21:25:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Red Kaleidoscopic Raiment plus stats.  Added Faerie Dragon's Nemesis Armor icon.  Fixed various Nemesis armor plus stats.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-14T17:36:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Vesture of Frost and Frost's Nemesis.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-14T18:40:00.0000000+00:00</Date>
+    <Type>BugFix</Type>
+    <Description>Updated knight stat formula.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-15T16:21:00.0000000+00:00</Date>
+    <Type>BugFix</Type>
+    <Description>Updated player damage done/taken formulas.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-20T18:47:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Krampus's Mantle and Nemesis.</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-22T11:51:00.0000000+00:00</Date>
+    <Type>BugFix</Type>
+    <Description>Fixed epic armor enhancement calculations (credit: DecuGamer).</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-22T11:51:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Aegis of Sky Majesty and Beastmaster's Battlegear now possible fusion results (credit: DecuGamer).</Description>
+  </Log>
+  <Log>
+    <Date>2013-12-22T21:19:00.0000000+00:00</Date>
+    <Type>NewFeature</Type>
+    <Description>Added Armorsmith and Fusion information to Enhancement calculators.</Description>
+  </Log>  
+  <Log>
+    <Date>2013-12-23T18:23:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Updated level data based on spreadsheet provided by DecuGamer.</Description>
+  </Log>
+  <Log>
+    <Date>2014-01-01T17:53:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Updated Kerstman's Shroud stats.  Added Bronze Chromatic Mantle, Druidic Platemail, Armor of Glacius.</Description>
+  </Log>
+  <Log>
+    <Date>2014-01-01T20:54:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Updated feed cost on Kaleidoscopic Raiments (credit: Jose Barreto).</Description>
+  </Log>
+  <Log>
+    <Date>2014-01-10T22:14:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Demon's Carapace, Drake Platemail, Fire Drake's Nemesis and Wrath Demon's Nemesis.</Description>
+  </Log>
+  <Log>
+    <Date>2014-01-21T19:11:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Wurmshroud Mantle, Sandstorm Platemail, Runic Robes.</Description>
+  </Log>
+  <Log>
+    <Date>2014-01-23T18:21:00.0000000+00:00</Date>
+    <Type>BugFix</Type>
+    <Description>Fixed bug with Epic Boss calculator when damage taken was calculated as 0.</Description>
+  </Log>
+  <Log>
+    <Date>2014-01-23T18:21:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Runic Robes regular stats.</Description>
+  </Log>
+  <Log>
+    <Date>2014-01-25T09:33:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Northerner's Battlegear to fusion results (credit: John Langskov).</Description>
+  </Log>
+  <Log>
+    <Date>2014-01-27T17:59:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Arborsteel Vanguard to fusion results (credit: John Langskov).</Description>
+  </Log>
+  <Log>
+    <Date>2014-01-27T17:59:00.0000000+00:00</Date>
+    <Type>Data</Type>
+    <Description>Added Green Kaleidoscopic Raiment and Typhoon Armor.</Description>
+  </Log>
+  <Log>
+    <Date>2014-02-09T22:09:00.0000000+00:00</Date>
+    <Type>NewFeature</Type>
+    <Description>Added warning messages regarding updates and links to GitHub repository.</Description>
+  </Log>
+</ArrayOfLog>

@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{784D88A2-675B-47F5-9DD8-4272EEA7840D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KnightsAndDragonsCalculatorApplication</RootNamespace>
+    <AssemblyName>KnightsAndDragonsCalculatorApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>App_Data/XmlDocument.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Calculator\Containers\Log.cs" />
+    <Compile Include="Calculator\Tables\LogTable.cs" />
+    <Compile Include="Calculator\Containers\EpicBossRequest.cs" />
+    <Compile Include="Calculator\Containers\EpicBossResultItem.cs" />
+    <Compile Include="Calculator\Containers\EpicBossResults.cs" />
+    <Compile Include="Calculator\Containers\FeedResults.cs" />
+    <Compile Include="Calculator\Containers\FusionResults.cs" />
+    <Compile Include="Calculator\KnightsAndDragonsCalculator.cs" />
+    <Compile Include="Calculator\Containers\PlayerArmor.cs" />
+    <Compile Include="Calculator\StaticLists.cs" />
+    <Compile Include="Calculator\Containers\StatsResults.cs" />
+    <Compile Include="Calculator\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ArmorDataController.cs" />
+    <Compile Include="Controllers\EpicBossTestController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Controllers\EnhancementController.cs" />
+    <Compile Include="Controllers\CalculatorApiController.cs" />
+    <Compile Include="Calculator\Containers\EpicBoss.cs" />
+    <Compile Include="Controllers\EpicBossController.cs" />
+    <Compile Include="Controllers\FusionController.cs" />
+    <Compile Include="Calculator\Containers\Guild.cs" />
+    <Compile Include="Controllers\LevelDataController.cs" />
+    <Compile Include="Calculator\Containers\Player.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Calculator\Containers\Armor.cs" />
+    <Compile Include="Calculator\Tables\ArmorTable.cs" />
+    <Compile Include="Calculator\Containers\ArmorStats.cs" />
+    <Compile Include="Calculator\Containers\CalculatorResults.cs" />
+    <Compile Include="Calculator\Containers\Level.cs" />
+    <Compile Include="Calculator\Tables\LevelTable.cs" />
+    <Compile Include="Models\AdminModel.cs" />
+    <Compile Include="Models\ArmorDataModel.cs" />
+    <Compile Include="Models\EpicBossTestModel.cs" />
+    <Compile Include="Models\LogModel.cs" />
+    <Compile Include="Models\EnhancementModel.cs" />
+    <Compile Include="Models\EpicBossModel.cs" />
+    <Compile Include="Models\FusionModel.cs" />
+    <Compile Include="Models\LevelDataModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\armors.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\levels.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\logs.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\XmlDocument.xml" />
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Icons\AbominablePlatemail.png" />
+    <Content Include="Images\Icons\AdmiralsBattlewornRegalia.png" />
+    <Content Include="Images\Icons\AdmiralsNemesisUniform.png" />
+    <Content Include="Images\Icons\AegisOfSkyMajesty.png" />
+    <Content Include="Images\Icons\AegisOfTheDragon.png" />
+    <Content Include="Images\Icons\AegisOfTheFallen.png" />
+    <Content Include="Images\Icons\AegisOfTheWyvern.png" />
+    <Content Include="Images\Icons\Air.png" />
+    <Content Include="Images\Icons\AirFusionBoostArmor.png" />
+    <Content Include="Images\Icons\All.png" />
+    <Content Include="Images\Icons\ArborsteelVanguard.png" />
+    <Content Include="Images\Icons\ArmorOfBoreas.png" />
+    <Content Include="Images\Icons\ArmorOfEurus.png" />
+    <Content Include="Images\Icons\ArmorOfGlacius.png" />
+    <Content Include="Images\Icons\ArmorOfNotus.png" />
+    <Content Include="Images\Icons\ArmorOfPhyrus.png" />
+    <Content Include="Images\Icons\ArmorOfTheBear.png" />
+    <Content Include="Images\Icons\ArmorOfTheDevoted.png" />
+    <Content Include="Images\Icons\ArmorOfTheInfernalLord.png" />
+    <Content Include="Images\Icons\ArmorOfTheWolf.png" />
+    <Content Include="Images\Icons\AsherahsArmor.png" />
+    <Content Include="Images\Icons\AsherahsNemesis.png" />
+    <Content Include="Images\Icons\AssassinsShroud.png" />
+    <Content Include="Images\Icons\AsuraArmor.png" />
+    <Content Include="Images\Icons\AtlanteanAvengerArmor.png" />
+    <Content Include="Images\Icons\BansheesNemesisWrappings.png" />
+    <Content Include="Images\Icons\BarbarianRaidingGear.png" />
+    <Content Include="Images\Icons\BasicAirArmor.png" />
+    <Content Include="Images\Icons\BasicEarthArmor.png" />
+    <Content Include="Images\Icons\BasicFireArmor.png" />
+    <Content Include="Images\Icons\BasicSpiritArmor.png" />
+    <Content Include="Images\Icons\BasicWaterArmor.png" />
+    <Content Include="Images\Icons\BattlesuitRemnants.png" />
+    <Content Include="Images\Icons\BattlesuitsNemesisGarb.png" />
+    <Content Include="Images\Icons\BeastmasterBattlegear.png" />
+    <Content Include="Images\Icons\BehemothsNemesis.png" />
+    <Content Include="Images\Icons\BehemothsVanguard.png" />
+    <Content Include="Images\Icons\BeringarsNemesis.png" />
+    <Content Include="Images\Icons\BlackfrostRaiment.png" />
+    <Content Include="Images\Icons\BlackKaleidoscopicRaiment.png" />
+    <Content Include="Images\Icons\BlazeborneVanguard.png" />
+    <Content Include="Images\Icons\BlazestoneMantle.png" />
+    <Content Include="Images\Icons\BoilerplateArmor.png" />
+    <Content Include="Images\Icons\BoneHarvestersGarb.png" />
+    <Content Include="Images\Icons\BoreassNemesis.png" />
+    <Content Include="Images\Icons\BrawlersArmor.png" />
+    <Content Include="Images\Icons\BronzeChromaticMantle.png" />
+    <Content Include="Images\Icons\ChimeraCorpsUniform.png" />
+    <Content Include="Images\Icons\ChitinousArmor.png" />
+    <Content Include="Images\Icons\CircesNemesis.png" />
+    <Content Include="Images\Icons\ClayplateMantle.png" />
+    <Content Include="Images\Icons\CloudKingsFinery.png" />
+    <Content Include="Images\Icons\CloudrangePlatemail.png" />
+    <Content Include="Images\Icons\CombustionArmor.png" />
+    <Content Include="Images\Icons\Common.png" />
+    <Content Include="Images\Icons\CorvussNemesis.png" />
+    <Content Include="Images\Icons\CrabsNemesisUniform.png" />
+    <Content Include="Images\Icons\CriusArmor.png" />
+    <Content Include="Images\Icons\DarkPrincesRoyalArmor.png" />
+    <Content Include="Images\Icons\DeepDragonMail.png" />
+    <Content Include="Images\Icons\DeepDragonsNemesisArmor.png" />
+    <Content Include="Images\Icons\DemonsCarapace.png" />
+    <Content Include="Images\Icons\DevasNemesis.png" />
+    <Content Include="Images\Icons\DorarsNemesis.png" />
+    <Content Include="Images\Icons\DragonflameArmor.png" />
+    <Content Include="Images\Icons\DragonTamerCostume.png" />
+    <Content Include="Images\Icons\DrakePlatemail.png" />
+    <Content Include="Images\Icons\DruidicPlatemail.png" />
+    <Content Include="Images\Icons\Earth.png" />
+    <Content Include="Images\Icons\EarthFusionBoostArmor.png" />
+    <Content Include="Images\Icons\EldritchKeepersRobes.png" />
+    <Content Include="Images\Icons\EmberLizardsNemesis.png" />
+    <Content Include="Images\Icons\EmbersteelArmor.png" />
+    <Content Include="Images\Icons\Epic.png" />
+    <Content Include="Images\Icons\EtherealGarment.png" />
+    <Content Include="Images\Icons\EurussNemesis.png" />
+    <Content Include="Images\Icons\ExorcistsVestments.png" />
+    <Content Include="Images\Icons\FaerieDragonsNemesisArmor.png" />
+    <Content Include="Images\Icons\FeatherbladeBattlegear.png" />
+    <Content Include="Images\Icons\FenrissNemesis.png" />
+    <Content Include="Images\Icons\Fire.png" />
+    <Content Include="Images\Icons\FireDrakesNemesis.png" />
+    <Content Include="Images\Icons\FireEatersNemesis.png" />
+    <Content Include="Images\Icons\FireFusionBoostArmor.png" />
+    <Content Include="Images\Icons\FlamegemNemesisArmor.png" />
+    <Content Include="Images\Icons\FlamehuntersGarb.png" />
+    <Content Include="Images\Icons\FlamestormFinery.png" />
+    <Content Include="Images\Icons\FlameSummonersShroud.png" />
+    <Content Include="Images\Icons\FlowstoneBattlegear.png" />
+    <Content Include="Images\Icons\ForgemastersGarb.png" />
+    <Content Include="Images\Icons\ForgemastersNemesisArmor.png" />
+    <Content Include="Images\Icons\ForgestoneAegis.png" />
+    <Content Include="Images\Icons\FrostsNemesis.png" />
+    <Content Include="Images\Icons\FusionBoost.png" />
+    <Content Include="Images\Icons\GlacierArmor.png" />
+    <Content Include="Images\Icons\GlorgsNemesis.png" />
+    <Content Include="Images\Icons\GorlogsNemesisArmor.png" />
+    <Content Include="Images\Icons\GreenKaleidoscopicRaiment.png" />
+    <Content Include="Images\Icons\GuardiansBattlegear.png" />
+    <Content Include="Images\Icons\HalfDragonsNemesisCostume.png" />
+    <Content Include="Images\Icons\HalfDragonWarriorsArmor.png" />
+    <Content Include="Images\Icons\HorribleWurmCostume.png" />
+    <Content Include="Images\Icons\HorsemansBattlegear.png" />
+    <Content Include="Images\Icons\HorsemansNemesis.png" />
+    <Content Include="Images\Icons\HuntersGarb.png" />
+    <Content Include="Images\Icons\HuntresssNemesisArmor.png" />
+    <Content Include="Images\Icons\HydraHuntersMail.png" />
+    <Content Include="Images\Icons\HydromancersMantle.png" />
+    <Content Include="Images\Icons\HydromancersNemesisFinery.png" />
+    <Content Include="Images\Icons\IceLichsNemesis.png" />
+    <Content Include="Images\Icons\JackalopesChaingarb.png" />
+    <Content Include="Images\Icons\JackalopesNemesis.png" />
+    <Content Include="Images\Icons\JiansBattlegear.png" />
+    <Content Include="Images\Icons\JiansNemesisMail.png" />
+    <Content Include="Images\Icons\KaleidoscopicStarmetalRaiment.png" />
+    <Content Include="Images\Icons\KerstmansShroud.png" />
+    <Content Include="Images\Icons\KrampussMantle.png" />
+    <Content Include="Images\Icons\KrampussNemesis.png" />
+    <Content Include="Images\Icons\Legendary.png" />
+    <Content Include="Images\Icons\LeviathansNemesis.png" />
+    <Content Include="Images\Icons\LeviathansPlatemail.png" />
+    <Content Include="Images\Icons\LightningLordArmor.png" />
+    <Content Include="Images\Icons\LivingFlameArmor.png" />
+    <Content Include="Images\Icons\MaelstromIrons.png" />
+    <Content Include="Images\Icons\MantleOfTheBeast.png" />
+    <Content Include="Images\Icons\MoltenShroud.png" />
+    <Content Include="Images\Icons\MonksVestments.png" />
+    <Content Include="Images\Icons\MonstrousGarb.png" />
+    <Content Include="Images\Icons\MoontidePlatemail.png" />
+    <Content Include="Images\Icons\MountainvineShroud.png" />
+    <Content Include="Images\Icons\MysticArmor.png" />
+    <Content Include="Images\Icons\Nemesis.png" />
+    <Content Include="Images\Icons\NerezzasNemesis.png" />
+    <Content Include="Images\Icons\NimbossNemesisArmor.png" />
+    <Content Include="Images\Icons\NoImage.png" />
+    <Content Include="Images\Icons\NorthernersBattlegear.png" />
+    <Content Include="Images\Icons\NotussNemesis.png" />
+    <Content Include="Images\Icons\PhyrussNemesis.png" />
+    <Content Include="Images\Icons\PyromancersMantle.png" />
+    <Content Include="Images\Icons\RageborneRaiment.png" />
+    <Content Include="Images\Icons\RaidersNemesisArmor.png" />
+    <Content Include="Images\Icons\Rare.png" />
+    <Content Include="Images\Icons\RavenlordsMantle.png" />
+    <Content Include="Images\Icons\RavenlordsNemesis.png" />
+    <Content Include="Images\Icons\RedKaleidoscopicRaiment.png" />
+    <Content Include="Images\Icons\RiverstoneMantle.png" />
+    <Content Include="Images\Icons\RocfeatherRobes.png" />
+    <Content Include="Images\Icons\RoyalFlameArmor.png" />
+    <Content Include="Images\Icons\RubyPlateMail.png" />
+    <Content Include="Images\Icons\RunicRobes.png" />
+    <Content Include="Images\Icons\SandstormPlatemail.png" />
+    <Content Include="Images\Icons\SasquatchsNemesis.png" />
+    <Content Include="Images\Icons\ScorchstoneAegis.png" />
+    <Content Include="Images\Icons\SeafoamArmor.png" />
+    <Content Include="Images\Icons\SirensNemesisArmor.png" />
+    <Content Include="Images\Icons\SkyGuardian.png" />
+    <Content Include="Images\Icons\SlimebaneBattlegear.png" />
+    <Content Include="Images\Icons\SnakeskinArmor.png" />
+    <Content Include="Images\Icons\SnowmansNemesis.png" />
+    <Content Include="Images\Icons\SoulshardNecromantle.png" />
+    <Content Include="Images\Icons\SoulshardRaiment.png" />
+    <Content Include="Images\Icons\SpartansWargear.png" />
+    <Content Include="Images\Icons\SpectralCaptainsUniform.png" />
+    <Content Include="Images\Icons\Spirit.png" />
+    <Content Include="Images\Icons\SpiritFusionBoostArmor.png" />
+    <Content Include="Images\Icons\StarsongShroud.png" />
+    <Content Include="Images\Icons\SteampoweredExoskeleton.png" />
+    <Content Include="Images\Icons\SteamWizardsRobes.png" />
+    <Content Include="Images\Icons\StonescalePlateMail.png" />
+    <Content Include="Images\Icons\StormrageArmor.png" />
+    <Content Include="Images\Icons\StormSorcerer.png" />
+    <Content Include="Images\Icons\SuperRare.png" />
+    <Content Include="Images\Icons\SwampDemonsNemesis.png" />
+    <Content Include="Images\Icons\SwampShamanRobes.png" />
+    <Content Include="Images\Icons\SwampstonePlatemail.png" />
+    <Content Include="Images\Icons\TectonicMantle.png" />
+    <Content Include="Images\Icons\TemperedBattlegear.png" />
+    <Content Include="Images\Icons\TenTonsNemesisRobes.png" />
+    <Content Include="Images\Icons\TorchflameMantle.png" />
+    <Content Include="Images\Icons\TortoiseshellAegis.png" />
+    <Content Include="Images\Icons\TortoisesNemesisArmor.png" />
+    <Content Include="Images\Icons\TrollforgePlatemail.png" />
+    <Content Include="Images\Icons\TrollKingsNemesis.png" />
+    <Content Include="Images\Icons\TyphoonArmor.png" />
+    <Content Include="Images\Icons\UltraRare.png" />
+    <Content Include="Images\Icons\Uncommon.png" />
+    <Content Include="Images\Icons\VestureOfFrost.png" />
+    <Content Include="Images\Icons\VinewoodCarapace.png" />
+    <Content Include="Images\Icons\VolcanicMantle.png" />
+    <Content Include="Images\Icons\WanderersNemesis.png" />
+    <Content Include="Images\Icons\WanderersShroud.png" />
+    <Content Include="Images\Icons\WarriorsNemesis.png" />
+    <Content Include="Images\Icons\Water.png" />
+    <Content Include="Images\Icons\WaterFusionBoostArmor.png" />
+    <Content Include="Images\Icons\WaveCharmersMantle.png" />
+    <Content Include="Images\Icons\WickedWraith.png" />
+    <Content Include="Images\Icons\WickerMantle.png" />
+    <Content Include="Images\Icons\WindMonarchsRobes.png" />
+    <Content Include="Images\Icons\WingWarriorsArmor.png" />
+    <Content Include="Images\Icons\WingWurmsNemesisArmor.png" />
+    <Content Include="Images\asc.gif" />
+    <Content Include="Images\bg.gif" />
+    <Content Include="Images\desc.gif" />
+    <Content Include="Images\Icons\WitchsRobes.png" />
+    <Content Include="Images\Icons\WrathDemonsNemesis.png" />
+    <Content Include="Images\Icons\WurmshroudMantle.png" />
+    <Content Include="Images\Icons\WyvernsNemesis.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Enhancement\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\LevelData\Index.cshtml" />
+    <Content Include="Views\ArmorData\Index.cshtml" />
+    <Content Include="Views\EpicBoss\Index.cshtml" />
+    <Content Include="Views\Fusion\Index.cshtml" />
+    <Content Include="Views\Log\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\EpicBossTest\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Calculator\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57523</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57523/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

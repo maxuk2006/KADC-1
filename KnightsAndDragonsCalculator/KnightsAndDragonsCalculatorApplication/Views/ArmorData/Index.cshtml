@@ -1,0 +1,174 @@
+﻿@model KnightsAndDragonsCalculatorApplication.Models.ArmorDataModel
+<div id="armorDataContainer" class="container center-block">
+    <ul class="nav nav-tabs">
+        <li><a href="#information" data-toggle="tab">Information</a></li>
+        <li><a href="#craft" data-toggle="tab">Crafting</a></li>
+        <li><a href="#normal" data-toggle="tab">Regular Stats</a></li>
+        <li><a href="#plus" data-toggle="tab">Plus Stats</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="information">
+            <table id="armorInformationTable" class="table table-hover tablesorter">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Rarity</th>
+                        <th>Element(s)</th>
+                        <th>Plus Level</th>
+                        <th>Max Level</th>
+                        <th>Feed EP</th>
+                        <th>Is Craftable</th>
+                        <th>Is Fusion Result?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var armor in Model.Armors)
+                    {
+                        <tr>
+                            <td><img src="../Images/Icons/@(armor.SafeName).png" alt="@armor.Name" class="img-rounded" />@armor.Name</td>
+                            <td data-sortValue="@armor.RaritySortOrder"><img src="../Images/Icons/@(armor.SafeRarityDescription).png" alt="@armor.RarityDescription" class="img-rounded" /></td>
+                            <td data-sortValue="@armor.ElementDescription"><img src="../Images/Icons/@(armor.Element1Description).png" alt="@armor.Element1Description" class="img-rounded" />@if (armor.Element2Description != string.Empty)
+{<img src="../Images/Icons/@(armor.Element2Description).png" alt="@armor.Element2Description" class="img-rounded" />}</td>
+                            <td>@armor.PlusLevel</td>
+                            <td>@armor.MaxLevel</td>
+                            <td>@armor.FeedCost</td>
+                            <td>@armor.IsCraftable</td>
+                            <td>@armor.IsFusionResult</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade" id="craft">
+            <table id="armorCraftTable" class="table table-hover tablesorter">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Craft Cost</th>
+                        <th>Craft Time</th>
+                        <th>Materials</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var armor in Model.Armors)
+                    {
+                        if (armor.IsCraftable)
+                        {
+                            <tr>
+                                <td><img src="../Images/Icons/@(armor.SafeName).png" alt="@armor.Name" class="img-rounded" />@armor.Name</td>
+                                <td>@armor.CraftCost</td>
+                                <td>@armor.CraftTime</td>
+                                <td>@armor.MaterialCount</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade" id="normal">
+            <table id="armorNormalTable" class="table table-hover tablesorter">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Start Attack</th>
+                        <th>Start Defense</th>
+                        <th>Max Attack</th>
+                        <th>Max Defense</th>
+                        <th>Max Total</th>
+                        <th>Attack Up</th>
+                        <th>Defense Up</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var armor in Model.Armors)
+                    {
+                        if (armor.NormalStats != null)
+                        {
+                            <tr>
+                                <td><img src="../Images/Icons/@(armor.SafeName).png" alt="@armor.Name" class="img-rounded" />@armor.Name</td>
+                                <td>@armor.NormalStats.AttackStart</td>
+                                <td>@armor.NormalStats.DefenseStart</td>
+                                <td>@armor.MaxNormalAttack</td>
+                                <td>@armor.MaxNormalDefense</td>
+                                <td>@armor.MaxNormalTotal</td>
+                                <td>@armor.NormalStats.AttackUp</td>
+                                <td>@armor.NormalStats.DefenseUp</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade" id="plus">
+            <table id="armorPlusTable" class="table table-hover tablesorter">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Start Attack</th>
+                        <th>Start Defense</th>
+                        <th>Max Attack</th>
+                        <th>Max Defense</th>
+                        <th>Max Total</th>
+                        <th>Attack Up</th>
+                        <th>Defense Up</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var armor in Model.Armors)
+                    {
+                        if (armor.PlusStats != null)
+                        {
+                            <tr>
+                                <td><img src="../Images/Icons/@(armor.SafeName).png" alt="@armor.Name" class="img-rounded" />@armor.Name</td>
+                                <td>@armor.PlusStats.AttackStart</td>
+                                <td>@armor.PlusStats.DefenseStart</td>
+                                <td>@armor.MaxPlusAttack</td>
+                                <td>@armor.MaxPlusDefense</td>
+                                <td>@armor.MaxPlusTotal</td>
+                                <td>@armor.PlusStats.AttackUp</td>
+                                <td>@armor.PlusStats.DefenseUp</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script>
+    $(document).ready(function () {
+
+        $.tablesorter.addParser({
+            id: "armorRarity",
+            is: function (s) {
+                return false;
+            },
+            format: function (s, table, cell, cellIndex) {
+                return $(cell).attr("data-sortValue") || s;
+            },
+            type: "numeric"
+        });
+        $.tablesorter.addParser({
+            id: "armorElement",
+            is: function (s) {
+                return false;
+            },
+            format: function (s, table, cell, cellIndex) {
+                return $(cell).attr("data-sortValue") || s;
+            },
+            type: "text"
+        });
+
+        $("#armorInformationTable").tablesorter({
+            headers: {
+                1: { sorter: "armorRarity" },
+                2: { sorter: "armorElement" }
+            }
+        });
+        $("#armorCraftTable").tablesorter();
+        $("#armorNormalTable").tablesorter();
+        $("#armorPlusTable").tablesorter();
+    });
+</script>
+

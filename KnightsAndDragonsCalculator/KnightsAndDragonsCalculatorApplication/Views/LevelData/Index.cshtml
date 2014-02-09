@@ -1,0 +1,28 @@
+﻿@model KnightsAndDragonsCalculatorApplication.Models.LevelDataModel
+<div id="levelDataContainer" class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Level</th>
+                <th>Gold Cost</th>
+                <th><img src="../Images/Icons/Common.png" alt="Common" class="img-rounded" />/<img src="../Images/Icons/Uncommon.png" alt="Uncommon" class="img-rounded" /></th>
+                <th><img src="../Images/Icons/Rare.png" alt="Rare" class="img-rounded" />/<img src="../Images/Icons/SuperRare.png" alt="Super Rare" class="img-rounded" /></th>
+                <th><img src="../Images/Icons/UltraRare.png" alt="Ultra Rare" class="img-rounded" />/<img src="../Images/Icons/Legendary.png" alt="Legendary" class="img-rounded" /></th>
+                <th><img src="../Images/Icons/Epic.png" alt="Epic" class="img-rounded" /></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 1; i <= Model.Levels.Count; i++)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@Model.Levels[i - 1].Gold</td>
+                    <td>@if (Model.Levels[i - 1].Jump30 > 0) { @Model.Levels[i - 1].Jump30 }</td>
+                    <td>@if (Model.Levels[i - 1].Jump50 > 0) { @Model.Levels[i - 1].Jump50 }</td>
+                    <td>@if (Model.Levels[i - 1].Jump70 > 0) { @Model.Levels[i - 1].Jump70 }</td>
+                    <td>@if (Model.Levels[i - 1].Jump99 > 0) { @Model.Levels[i - 1].Jump99 }</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

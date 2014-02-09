@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Knights & Dragons Calculator", "Index", "Enhancement", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Enhancement", "Index", "Enhancement", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Fusion", "Index", "Fusion", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Epic Boss", "Index", "EpicBoss", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Level Data", "Index", "LevelData", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Armor Data", "Index", "ArmorData", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Change Log", "Index", "Log", new { area = "" }, null)</li>
+                    <!--<li>@Html.ActionLink("Epic Boss Test", "Index", "EpicBossTest", new { area = "" }, null)</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <br />
+        <div class="alert alert-danger">I am no longer actively updating and supporting this site.  All code is now available on <a href="https://github.com/csuzw/KADC">GitHub</a>.  Feel free to use it and rehost it as you wish (and sorry about the state of the code, I was being quite lazy!).</div>
+        <br />
+        @RenderBody()
+        <hr />
+        <footer>
+            <ul class="list-group">
+                <li class="list-group-item">&copy; @DateTime.Now.Year - RJC - Found any mistakes or have any suggestions?  <a href="mailto:rjcarrington@gmail.com">Contact me here!</a></li>
+                <li class="list-group-item">Armor and fusion data from <a href="http://knights-and-dragons.wikia.com/">Knights & Dragons Wiki</a></li>
+                <li class="list-group-item">Level data and epic boss formula help from <a href="http://knights-and-dragons.wikia.com/wiki/User_blog:LuxRegem/Enhancing_Armour_(1)_-_Some_basic_data">LuxRegem</a></li>
+                <li class="list-group-item">Epic boss formulas and help from <a href="http://www.funzio.com/forum/showthread.php?55912-Theorycrafting-solved-the-Epic-Boss-damage!">Theorycrafter</a>, <a href="https://docs.google.com/spreadsheet/ccc?key=0As8tTdFx1BUkdEdaeFR6d1dHMGF1SXlMdGFwMjlFMGc&usp=sharing#gid=12">Lii</a> and <a href="http://www.uzrbin.com/sim.html">phenom_</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

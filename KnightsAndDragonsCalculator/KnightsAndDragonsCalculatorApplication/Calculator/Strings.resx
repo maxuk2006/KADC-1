@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AegisOfSkyMajesty" xml:space="preserve">
+    <value>Aegis of Sky Majesty</value>
+  </data>
+  <data name="AirFusionBoostArmor" xml:space="preserve">
+    <value>Air Fusion Boost Armor</value>
+  </data>
+  <data name="ArborsteelVanguard" xml:space="preserve">
+    <value>Arborsteel Vanguard</value>
+  </data>
+  <data name="ErrorArmorDataMissing" xml:space="preserve">
+    <value>Armor data missing.</value>
+  </data>
+  <data name="ErrorArmorNotFound" xml:space="preserve">
+    <value>Armor not found.</value>
+  </data>
+  <data name="ArmorOfTheDevoted" xml:space="preserve">
+    <value>Armor of the Devoted</value>
+  </data>
+  <data name="ArmorOfTheInfernalLord" xml:space="preserve">
+    <value>Armor of the Infernal Lord</value>
+  </data>
+  <data name="AsuraArmor" xml:space="preserve">
+    <value>Asura Armor</value>
+  </data>
+  <data name="AtlanteanAvengerArmor" xml:space="preserve">
+    <value>Atlantean Avenger Armor</value>
+  </data>
+  <data name="BeastmasterBattlegear" xml:space="preserve">
+    <value>Beastmaster Battlegear</value>
+  </data>
+  <data name="BlazeborneVanguard" xml:space="preserve">
+    <value>Blazeborne Vanguard</value>
+  </data>
+  <data name="BlazestoneMantle" xml:space="preserve">
+    <value>Blazestone Mantle</value>
+  </data>
+  <data name="BrawlersArmor" xml:space="preserve">
+    <value>Brawler's Armor</value>
+  </data>
+  <data name="ChimeraCorpsUniform" xml:space="preserve">
+    <value>Chimera Corps Uniform</value>
+  </data>
+  <data name="CloudrangePlatemail" xml:space="preserve">
+    <value>Cloudrange Platemail</value>
+  </data>
+  <data name="CommonAirArmor" xml:space="preserve">
+    <value>Basic Air Armor</value>
+  </data>
+  <data name="CommonEarthArmor" xml:space="preserve">
+    <value>Basic Earth Armor</value>
+  </data>
+  <data name="CommonFireArmor" xml:space="preserve">
+    <value>Basic Fire Armor</value>
+  </data>
+  <data name="CommonSpiritArmor" xml:space="preserve">
+    <value>Basic Spirit Armor</value>
+  </data>
+  <data name="CommonWaterArmor" xml:space="preserve">
+    <value>Basic Water Armor</value>
+  </data>
+  <data name="CriusArmor" xml:space="preserve">
+    <value>Crius Armor</value>
+  </data>
+  <data name="DarkPrincesRoyalArmor" xml:space="preserve">
+    <value>Dark Prince's Royal Armor</value>
+  </data>
+  <data name="EarthFusionBoostArmor" xml:space="preserve">
+    <value>Earth Fusion Boost Armor</value>
+  </data>
+  <data name="EmbersteelArmor" xml:space="preserve">
+    <value>Embersteel Armor</value>
+  </data>
+  <data name="ExorcistsVestments" xml:space="preserve">
+    <value>Exorcist's Vestments</value>
+  </data>
+  <data name="FireFusionBoostArmor" xml:space="preserve">
+    <value>Fire Fusion Boost Armor</value>
+  </data>
+  <data name="FlamestormFinery" xml:space="preserve">
+    <value>Flamestorm Finery</value>
+  </data>
+  <data name="FlowstoneBattlegear" xml:space="preserve">
+    <value>Flowstone Battlegear</value>
+  </data>
+  <data name="ForgemastersGarb" xml:space="preserve">
+    <value>Forgemaster's Garb</value>
+  </data>
+  <data name="ForgestoneAegis" xml:space="preserve">
+    <value>Forgestone Aegis</value>
+  </data>
+  <data name="GlacierArmor" xml:space="preserve">
+    <value>Glacier Armor</value>
+  </data>
+  <data name="HydraHuntersMail" xml:space="preserve">
+    <value>Hydra Hunter's Mail</value>
+  </data>
+  <data name="ErrorLevelDataMissing" xml:space="preserve">
+    <value>Level data missing.</value>
+  </data>
+  <data name="LightningLordArmor" xml:space="preserve">
+    <value>Lightning Lord Armor</value>
+  </data>
+  <data name="LivingFlameArmor" xml:space="preserve">
+    <value>Living Flame Armor</value>
+  </data>
+  <data name="MaelstromIrons" xml:space="preserve">
+    <value>Maelstrom Irons</value>
+  </data>
+  <data name="MoltenShroud" xml:space="preserve">
+    <value>Molten Shroud</value>
+  </data>
+  <data name="MonksVestments" xml:space="preserve">
+    <value>Monk's Vestments</value>
+  </data>
+  <data name="MonstrousGarb" xml:space="preserve">
+    <value>Monstrous Garb</value>
+  </data>
+  <data name="MoontidePlatemail" xml:space="preserve">
+    <value>Moontide Platemail</value>
+  </data>
+  <data name="NorthernersBattlegear" xml:space="preserve">
+    <value>Northerner's Battlegear</value>
+  </data>
+  <data name="RageborneRaiment" xml:space="preserve">
+    <value>Rageborne Raiment</value>
+  </data>
+  <data name="RarityCommon" xml:space="preserve">
+    <value>Common</value>
+  </data>
+  <data name="RarityEpic" xml:space="preserve">
+    <value>Epic</value>
+  </data>
+  <data name="RarityFusionBoost" xml:space="preserve">
+    <value>Fusion Boost</value>
+  </data>
+  <data name="RarityLegendary" xml:space="preserve">
+    <value>Legendary</value>
+  </data>
+  <data name="RarityRare" xml:space="preserve">
+    <value>Rare</value>
+  </data>
+  <data name="RaritySuperRare" xml:space="preserve">
+    <value>Super Rare</value>
+  </data>
+  <data name="RarityUltraRare" xml:space="preserve">
+    <value>Ultra Rare</value>
+  </data>
+  <data name="RarityUncommon" xml:space="preserve">
+    <value>Uncommon</value>
+  </data>
+  <data name="RiverstoneMantle" xml:space="preserve">
+    <value>Riverstone Mantle</value>
+  </data>
+  <data name="RocfeatherRobes" xml:space="preserve">
+    <value>Rocfeather Robes</value>
+  </data>
+  <data name="RoyalFlameArmor" xml:space="preserve">
+    <value>Royal Flame Armor</value>
+  </data>
+  <data name="SkyGuardian" xml:space="preserve">
+    <value>Sky Guardian</value>
+  </data>
+  <data name="SnakeskinArmor" xml:space="preserve">
+    <value>Snakeskin Armor</value>
+  </data>
+  <data name="SoulshardNecromantle" xml:space="preserve">
+    <value>Soulshard Necromantle</value>
+  </data>
+  <data name="SpectralCaptainsUniform" xml:space="preserve">
+    <value>Spectral Captain's Uniform</value>
+  </data>
+  <data name="SpiritFusionBoostArmor" xml:space="preserve">
+    <value>Spirit Fusion Boost Armor</value>
+  </data>
+  <data name="SteamWizardsRobes" xml:space="preserve">
+    <value>Steam Wizard's Robes</value>
+  </data>
+  <data name="StormrageArmor" xml:space="preserve">
+    <value>Stormrage Armor</value>
+  </data>
+  <data name="StormSorcerer" xml:space="preserve">
+    <value>Storm Sorcerer</value>
+  </data>
+  <data name="SwampShamanRobes" xml:space="preserve">
+    <value>Swamp Shaman Robes</value>
+  </data>
+  <data name="TectonicMantle" xml:space="preserve">
+    <value>Tectonic Mantle</value>
+  </data>
+  <data name="TorchflameMantle" xml:space="preserve">
+    <value>Torchflame Mantle</value>
+  </data>
+  <data name="UncommonAirArmor" xml:space="preserve">
+    <value>Wing Warrior's Armor</value>
+  </data>
+  <data name="UncommonEarthArmor" xml:space="preserve">
+    <value>Stonescale Plate Mail</value>
+  </data>
+  <data name="UncommonFireArmor" xml:space="preserve">
+    <value>Dragonflame Armor</value>
+  </data>
+  <data name="UncommonSpiritArmor" xml:space="preserve">
+    <value>Mystic Armor</value>
+  </data>
+  <data name="UncommonWaterArmor" xml:space="preserve">
+    <value>Seafoam Armor</value>
+  </data>
+  <data name="VinewoodCarapace" xml:space="preserve">
+    <value>Vinewood Carapace</value>
+  </data>
+  <data name="VolcanicMantle" xml:space="preserve">
+    <value>Volcanic Mantle</value>
+  </data>
+  <data name="WaterFusionBoostArmor" xml:space="preserve">
+    <value>Water Fusion Boost Armor</value>
+  </data>
+  <data name="WaveCharmersMantle" xml:space="preserve">
+    <value>Wave Charmer's Mantle</value>
+  </data>
+  <data name="WickedWraith" xml:space="preserve">
+    <value>Wicked Wraith</value>
+  </data>
+  <data name="WindMonarchsRobes" xml:space="preserve">
+    <value>Wind Monarch's Robes</value>
+  </data>
+  <data name="ElementAir" xml:space="preserve">
+    <value>Air</value>
+  </data>
+  <data name="ElementEarth" xml:space="preserve">
+    <value>Earth</value>
+  </data>
+  <data name="ElementFire" xml:space="preserve">
+    <value>Fire</value>
+  </data>
+  <data name="ElementSpirit" xml:space="preserve">
+    <value>Spirit</value>
+  </data>
+  <data name="ElementWater" xml:space="preserve">
+    <value>Water</value>
+  </data>
+  <data name="TypeCraftable" xml:space="preserve">
+    <value>Craftable</value>
+  </data>
+  <data name="TypeNonCraftable" xml:space="preserve">
+    <value>Non-craftable</value>
+  </data>
+  <data name="AdmiralsBattlewornRegalia" xml:space="preserve">
+    <value>Admiral's Battleworn Regalia</value>
+  </data>
+  <data name="AegisOfTheDragon" xml:space="preserve">
+    <value>Aegis Of The Dragon</value>
+  </data>
+  <data name="AegisOfTheFallen" xml:space="preserve">
+    <value>Aegis Of The Fallen</value>
+  </data>
+  <data name="AegisOfTheWyvern" xml:space="preserve">
+    <value>Aegis Of The Wyvern</value>
+  </data>
+  <data name="ArmorOfBoreas" xml:space="preserve">
+    <value>Armor Of Boreas</value>
+  </data>
+  <data name="ArmorOfEurus" xml:space="preserve">
+    <value>Armor Of Eurus</value>
+  </data>
+  <data name="ArmorOfNotus" xml:space="preserve">
+    <value>Armor Of Notus</value>
+  </data>
+  <data name="ArmorOfPhyrus" xml:space="preserve">
+    <value>Armor Of Phyrus</value>
+  </data>
+  <data name="ArmorOfTheBear" xml:space="preserve">
+    <value>Armor Of The Bear</value>
+  </data>
+  <data name="ArmorOfTheWolf" xml:space="preserve">
+    <value>Armor Of The Wolf</value>
+  </data>
+  <data name="AsherahsArmor" xml:space="preserve">
+    <value>Asherah's Armor</value>
+  </data>
+  <data name="AssassinsShroud" xml:space="preserve">
+    <value>Assassin's Shroud</value>
+  </data>
+  <data name="BarbarianRaidingGear" xml:space="preserve">
+    <value>Barbarian Raiding Gear</value>
+  </data>
+  <data name="BattlesuitRemnants" xml:space="preserve">
+    <value>Battlesuit Remnants</value>
+  </data>
+  <data name="BehemothsVanguard" xml:space="preserve">
+    <value>Behemoth's Vanguard</value>
+  </data>
+  <data name="BlackfrostRaiment" xml:space="preserve">
+    <value>Blackfrost Raiment</value>
+  </data>
+  <data name="BlackKaleidoscopicRaiment" xml:space="preserve">
+    <value>Black Kaleidoscopic Raiment</value>
+  </data>
+  <data name="BoilerplateArmor" xml:space="preserve">
+    <value>Boilerplate Armor</value>
+  </data>
+  <data name="BoneHarvestersGarb" xml:space="preserve">
+    <value>Bone Harvester's Garb</value>
+  </data>
+  <data name="ChitinousArmor" xml:space="preserve">
+    <value>Chitinous Armor</value>
+  </data>
+  <data name="ClayplateMantle" xml:space="preserve">
+    <value>Clayplate Mantle</value>
+  </data>
+  <data name="CloudKingsFinery" xml:space="preserve">
+    <value>Cloud King's Finery</value>
+  </data>
+  <data name="CombustionArmor" xml:space="preserve">
+    <value>Combustion Armor</value>
+  </data>
+  <data name="DeepDragonMail" xml:space="preserve">
+    <value>Deep Dragon Mail</value>
+  </data>
+  <data name="DragonTamerCostume" xml:space="preserve">
+    <value>Dragon Tamer Costume</value>
+  </data>
+  <data name="EldritchKeepersRobes" xml:space="preserve">
+    <value>Eldritch Keeper's Robes</value>
+  </data>
+  <data name="ElementAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="EtherealGarment" xml:space="preserve">
+    <value>Ethereal Garment</value>
+  </data>
+  <data name="FeatherbladeBattlegear" xml:space="preserve">
+    <value>Featherblade Battlegear</value>
+  </data>
+  <data name="FlamehuntersGarb" xml:space="preserve">
+    <value>Flamehunter's Garb</value>
+  </data>
+  <data name="FlameSummonersShroud" xml:space="preserve">
+    <value>Flame Summoner's Shroud</value>
+  </data>
+  <data name="GuardiansBattlegear" xml:space="preserve">
+    <value>Guardian's Battlegear</value>
+  </data>
+  <data name="HalfDragonWarriorsArmor" xml:space="preserve">
+    <value>Half-Dragon Warrior's Armor</value>
+  </data>
+  <data name="HorribleWurmCostume" xml:space="preserve">
+    <value>Horrible Wurm Costume</value>
+  </data>
+  <data name="HorsemansBattlegear" xml:space="preserve">
+    <value>Horseman's Battlegear</value>
+  </data>
+  <data name="HuntersGarb" xml:space="preserve">
+    <value>Hunter's Garb</value>
+  </data>
+  <data name="HydromancersMantle" xml:space="preserve">
+    <value>Hydromancer's Mantle</value>
+  </data>
+  <data name="JackalopesChaingarb" xml:space="preserve">
+    <value>Jackalope's Chaingarb</value>
+  </data>
+  <data name="JiansBattlegear" xml:space="preserve">
+    <value>Jian's Battlegear</value>
+  </data>
+  <data name="KaleidoscopicStarmetalRaiment" xml:space="preserve">
+    <value>Kaleidoscopic Starmetal Raiment</value>
+  </data>
+  <data name="LeviathansPlatemail" xml:space="preserve">
+    <value>Leviathan's Platemail</value>
+  </data>
+  <data name="MantleOfTheBeast" xml:space="preserve">
+    <value>Mantle Of The Beast</value>
+  </data>
+  <data name="MountainvineShroud" xml:space="preserve">
+    <value>Mountainvine Shroud</value>
+  </data>
+  <data name="PyromancersMantle" xml:space="preserve">
+    <value>Pyromancer's Mantle</value>
+  </data>
+  <data name="RavenlordsMantle" xml:space="preserve">
+    <value>Ravenlord's Mantle</value>
+  </data>
+  <data name="RubyPlateMail" xml:space="preserve">
+    <value>Ruby Plate Mail</value>
+  </data>
+  <data name="ScorchstoneAegis" xml:space="preserve">
+    <value>Scorchstone Aegis</value>
+  </data>
+  <data name="SlimebaneBattlegear" xml:space="preserve">
+    <value>Slimebane Battlegear</value>
+  </data>
+  <data name="SoulshardRaiment" xml:space="preserve">
+    <value>Soulshard Raiment</value>
+  </data>
+  <data name="SpartansWargear" xml:space="preserve">
+    <value>Spartan's Wargear</value>
+  </data>
+  <data name="StarsongShroud" xml:space="preserve">
+    <value>Starsong Shroud</value>
+  </data>
+  <data name="SteampoweredExoskeleton" xml:space="preserve">
+    <value>Steampowered Exoskeleton</value>
+  </data>
+  <data name="SwampstonePlatemail" xml:space="preserve">
+    <value>Swampstone Platemail</value>
+  </data>
+  <data name="TemperedBattlegear" xml:space="preserve">
+    <value>Tempered Battlegear</value>
+  </data>
+  <data name="TortoiseshellAegis" xml:space="preserve">
+    <value>Tortoiseshell Aegis</value>
+  </data>
+  <data name="TrollforgePlatemail" xml:space="preserve">
+    <value>Trollforge Platemail</value>
+  </data>
+  <data name="WanderersShroud" xml:space="preserve">
+    <value>Wanderer's Shroud</value>
+  </data>
+  <data name="WickerMantle" xml:space="preserve">
+    <value>Wicker Mantle</value>
+  </data>
+  <data name="WitchsRobes" xml:space="preserve">
+    <value>Witch's Robes</value>
+  </data>
+  <data name="ErrorInvalidTargetLevel" xml:space="preserve">
+    <value>Target level must be between 1 and target armor's maximum level.</value>
+  </data>
+  <data name="ErrorInvalidStartLevel" xml:space="preserve">
+    <value>Start level must be between 1 and target level.</value>
+  </data>
+  <data name="RarityNemesis" xml:space="preserve">
+    <value>Nemesis</value>
+  </data>
+  <data name="ErrorArmorSameElement" xml:space="preserve">
+    <value>Armors with same element cannot be combined.</value>
+  </data>
+  <data name="AbominablePlatemail" xml:space="preserve">
+    <value>Abominable Platemail</value>
+  </data>
+  <data name="NoImage" xml:space="preserve">
+    <value>NoImage</value>
+  </data>
+  <data name="AdmiralsNemesisUniform" xml:space="preserve">
+    <value>Admiral's Nemesis Uniform</value>
+  </data>
+  <data name="AsherahsNemesis" xml:space="preserve">
+    <value>Asherah's Nemesis</value>
+  </data>
+  <data name="BansheesNemesisWrappings" xml:space="preserve">
+    <value>Banshee's Nemesis Wrappings</value>
+  </data>
+  <data name="BattlesuitsNemesisGarb" xml:space="preserve">
+    <value>Battlesuit's Nemesis Garb</value>
+  </data>
+  <data name="BehemothsNemesis" xml:space="preserve">
+    <value>Behemoth's Nemesis</value>
+  </data>
+  <data name="BeringarsNemesis" xml:space="preserve">
+    <value>Beringar's Nemesis</value>
+  </data>
+  <data name="BoreassNemesis" xml:space="preserve">
+    <value>Boreas's Nemesis</value>
+  </data>
+  <data name="CircesNemesis" xml:space="preserve">
+    <value>Circe's Nemesis</value>
+  </data>
+  <data name="CorvussNemesis" xml:space="preserve">
+    <value>Corvus's Nemesis</value>
+  </data>
+  <data name="CrabsNemesisUniform" xml:space="preserve">
+    <value>Crab's Nemesis Uniform</value>
+  </data>
+  <data name="DeepDragonsNemesisArmor" xml:space="preserve">
+    <value>Deep Dragon's Nemesis Armor</value>
+  </data>
+  <data name="DevasNemesis" xml:space="preserve">
+    <value>Deva's Nemesis</value>
+  </data>
+  <data name="DorarsNemesis" xml:space="preserve">
+    <value>Dorar's Nemesis</value>
+  </data>
+  <data name="EmberLizardsNemesis" xml:space="preserve">
+    <value>Ember Lizard's Nemesis</value>
+  </data>
+  <data name="EurussNemesis" xml:space="preserve">
+    <value>Eurus's Nemesis</value>
+  </data>
+  <data name="FaerieDragonsNemesisArmor" xml:space="preserve">
+    <value>Faerie Dragons' Nemesis Armor</value>
+  </data>
+  <data name="FenrissNemesis" xml:space="preserve">
+    <value>Fenris's Nemesis</value>
+  </data>
+  <data name="FireEatersNemesis" xml:space="preserve">
+    <value>Fire Eater's Nemesis</value>
+  </data>
+  <data name="FlamegemNemesisArmor" xml:space="preserve">
+    <value>Flamegem Nemesis Armor</value>
+  </data>
+  <data name="ForgemastersNemesisArmor" xml:space="preserve">
+    <value>Forgemaster's Nemesis Armor</value>
+  </data>
+  <data name="GlorgsNemesis" xml:space="preserve">
+    <value>Glorg's Nemesis</value>
+  </data>
+  <data name="GorlogsNemesisArmor" xml:space="preserve">
+    <value>Gorlog's Nemesis Armor</value>
+  </data>
+  <data name="HalfDragonsNemesisCostume" xml:space="preserve">
+    <value>Half-Dragons' Nemesis Costume</value>
+  </data>
+  <data name="HorsemansNemesis" xml:space="preserve">
+    <value>Horseman's Nemesis</value>
+  </data>
+  <data name="HuntresssNemesisArmor" xml:space="preserve">
+    <value>Huntress's Nemesis Armor</value>
+  </data>
+  <data name="HydromancersNemesisFinery" xml:space="preserve">
+    <value>Hydromancer's Nemesis Finery</value>
+  </data>
+  <data name="IceLichsNemesis" xml:space="preserve">
+    <value>Ice Lich's Nemesis</value>
+  </data>
+  <data name="JackalopesNemesis" xml:space="preserve">
+    <value>Jackalope's Nemesis</value>
+  </data>
+  <data name="JiansNemesisMail" xml:space="preserve">
+    <value>Jian's Nemesis Mail</value>
+  </data>
+  <data name="KerstmansShroud" xml:space="preserve">
+    <value>Kerstman's Shroud</value>
+  </data>
+  <data name="LeviathansNemesis" xml:space="preserve">
+    <value>Leviathan's Nemesis</value>
+  </data>
+  <data name="NerezzasNemesis" xml:space="preserve">
+    <value>Nerezza's Nemesis</value>
+  </data>
+  <data name="NimbossNemesisArmor" xml:space="preserve">
+    <value>Nimboss Nemesis Armor</value>
+  </data>
+  <data name="NotussNemesis" xml:space="preserve">
+    <value>Notus's Nemesis</value>
+  </data>
+  <data name="PhyrussNemesis" xml:space="preserve">
+    <value>Phyrus's Nemesis</value>
+  </data>
+  <data name="RaidersNemesisArmor" xml:space="preserve">
+    <value>Raider's Nemesis Armor</value>
+  </data>
+  <data name="RavenlordsNemesis" xml:space="preserve">
+    <value>Ravenlord's Nemesis</value>
+  </data>
+  <data name="SasquatchsNemesis" xml:space="preserve">
+    <value>Sasquatch's Nemesis</value>
+  </data>
+  <data name="SirensNemesisArmor" xml:space="preserve">
+    <value>Siren's Nemesis Armor</value>
+  </data>
+  <data name="SnowmansNemesis" xml:space="preserve">
+    <value>Snowman's Nemesis</value>
+  </data>
+  <data name="SwampDemonsNemesis" xml:space="preserve">
+    <value>Swamp Demon's Nemesis</value>
+  </data>
+  <data name="TenTonsNemesisRobes" xml:space="preserve">
+    <value>Ten-Ton's Nemesis Robes</value>
+  </data>
+  <data name="TortoisesNemesisArmor" xml:space="preserve">
+    <value>Tortoise's Nemesis Armor</value>
+  </data>
+  <data name="TrollKingsNemesis" xml:space="preserve">
+    <value>Troll King's Nemesis</value>
+  </data>
+  <data name="WanderersNemesis" xml:space="preserve">
+    <value>Wanderer's Nemesis</value>
+  </data>
+  <data name="WarriorsNemesis" xml:space="preserve">
+    <value>Warrior's Nemesis</value>
+  </data>
+  <data name="WingWurmsNemesisArmor" xml:space="preserve">
+    <value>Wing-Wurm's Nemesis Armor</value>
+  </data>
+  <data name="WyvernsNemesis" xml:space="preserve">
+    <value>Wyvern's Nemesis</value>
+  </data>
+  <data name="GuildRankChampion" xml:space="preserve">
+    <value>Champion</value>
+  </data>
+  <data name="GuildRankCommander" xml:space="preserve">
+    <value>Commander</value>
+  </data>
+  <data name="GuildRankHighCommander" xml:space="preserve">
+    <value>High Commander</value>
+  </data>
+  <data name="GuildRankMaster" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <data name="GuildRankSentinel" xml:space="preserve">
+    <value>Sentinel</value>
+  </data>
+  <data name="ErrorArmorStatsNotAvailable" xml:space="preserve">
+    <value>{0}: Stats data not available for this armor.</value>
+  </data>
+  <data name="ErrorBossDataNotProvided" xml:space="preserve">
+    <value>Boss data must be provided.</value>
+  </data>
+  <data name="ErrorGuildDataNotProvided" xml:space="preserve">
+    <value>Guild data must be provided.</value>
+  </data>
+  <data name="ErrorInvalidBossLevel" xml:space="preserve">
+    <value>Boss level must be between 1 and 60.</value>
+  </data>
+  <data name="ErrorInvalidBossStats" xml:space="preserve">
+    <value>Boss stats must be greater than 0.</value>
+  </data>
+  <data name="ErrorInvalidIsNemesis" xml:space="preserve">
+    <value>{0}: Cannot be flagged as Nemesis as it is not a Nemesis armor.</value>
+  </data>
+  <data name="ErrorInvalidPlayerArmorLevel" xml:space="preserve">
+    <value>{0}: Level must be between 1 and {1}.</value>
+  </data>
+  <data name="ErrorInvalidPlayerKnightCount" xml:space="preserve">
+    <value>Number of knights must be between 1 and 5.</value>
+  </data>
+  <data name="ErrorInvalidPlayerLevel" xml:space="preserve">
+    <value>Player level must be between 1 and 100.</value>
+  </data>
+  <data name="ErrorNotImplementYet" xml:space="preserve">
+    <value>Not implemented yet.</value>
+  </data>
+  <data name="ErrorPlayerArmorNotFound" xml:space="preserve">
+    <value>{0}: Armor not found.</value>
+  </data>
+  <data name="ErrorPlayerArmorsDataNotProvided" xml:space="preserve">
+    <value>At least 1 armor must be provided.</value>
+  </data>
+  <data name="ErrorPlayerDataNotProvided" xml:space="preserve">
+    <value>Player data must be provided.</value>
+  </data>
+  <data name="FileNameArmors" xml:space="preserve">
+    <value>~/App_Data/armors.xml</value>
+  </data>
+  <data name="FileNameLevels" xml:space="preserve">
+    <value>~/App_Data/levels.xml</value>
+  </data>
+  <data name="FileNameLogs" xml:space="preserve">
+    <value>~/App_Data/logs.xml</value>
+  </data>
+  <data name="LogTypeBugFix" xml:space="preserve">
+    <value>Bug Fix</value>
+  </data>
+  <data name="LogTypeData" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="LogTypeNewFeature" xml:space="preserve">
+    <value>New Feature</value>
+  </data>
+  <data name="RedKaleidoscopicArmor" xml:space="preserve">
+    <value>Red Kaleidoscopic Armor</value>
+  </data>
+  <data name="ErrorInvalidArmorsmithCount" xml:space="preserve">
+    <value>Armorsmith count must be greater than 0.</value>
+  </data>
+  <data name="ErrorInvalidArmorsmithLevel" xml:space="preserve">
+    <value>Armorsmith level must be between 1 and 3.</value>
+  </data>
+</root>
